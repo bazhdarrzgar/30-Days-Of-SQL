@@ -1,3 +1,12 @@
+# installing sqlite Studion
+## installing sqlite Studio for Linux and Windows (recommended)
+
+* just go to this [website](https://sqlitestudio.pl/) and find your platform and donwnload it
+
+* Guide for Windows [youtube](https://www.youtube.com/watch?v=GcrPVrzWA8U)
+
+* Guide for Debian [youtube](https://www.youtube.com/watch?v=Yp5K0u9-uJQ)
+
 # installing MySQL Server
 
 #### for linux user (DEBIAN)
