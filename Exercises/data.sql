@@ -31,7 +31,7 @@ INSERT INTO albums(id,name,release_year,band_id) VALUES (16,'A Storm to Come',20
 INSERT INTO albums(id,name,release_year,band_id) VALUES (17,'Break the Silence',2011,6);
 INSERT INTO albums(id,name,release_year,band_id) VALUES (18,'Tribe of Force',2010,6);
 INSERT INTO albums(id,name,release_year,band_id) VALUES (18,'Tribe of Force',2010,6);
-INSERT INTO albums(id,name,release_year,band_id) VALUES (18,,2010,6);
+INSERT INTO albums(id,name,release_year,band_id) VALUES (19,'Master of Puppets',NULL,2);
 
 
 
