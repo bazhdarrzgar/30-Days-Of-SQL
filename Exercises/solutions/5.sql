@@ -58,6 +58,10 @@ HAVING COUNT(albums.band_id) = 0;
 
 
 
+
+
+-- Start
+
 SELECT bands.name, bands.id, albums.band_id FROM bands 
 LEFT JOIN albums ON bands.id = albums.band_id 
 GROUP BY bands.id 

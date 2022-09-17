@@ -32,6 +32,8 @@ SET release_year = 1986 WHERE id = 4;
 
 
 
+-- Start
+
 SELECT * FROM albums where release_year IS NULL;
 
 +----+-------------------+--------------+---------+

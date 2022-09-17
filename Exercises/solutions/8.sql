@@ -1,11 +1,46 @@
-INSERT INTO bands (name)
-VALUES ('Favorite Band Name');
-
-/* This is the query used to get the band id of the band just added */
+SELECT * FROM bands
 /*
-  SELECT id FROM bands
-  ORDER BY id DESC LIMIT 1;
+ORDER BY id    this will sort the id from Lower to High
+
+ORDER BY id DESC   reversing the ordering this will be from Higher to Lower
 */
+ORDER BY id DESC LIMIT 1;
+
+
+
+
+
+
+-- Start 
+
+INSERT INTO bands (name)
+VALUES ('Edward Maya');
+
+
+
+SELECT * FROM bands
+ORDER BY id DESC LIMIT 1;
+
++----+-------------+
+| id | name        |
++----+-------------+
+|  9 | Edward Maya |
++----+-------------+
+
+
+
+
 
 INSERT INTO albums (name, release_year, band_id)
-VALUES ('Favorite Album Name', 2000, 8);
+VALUES ('STEREO LOVE', 2010, 9);
+
+
+
+SELECT * FROM albums
+ORDER BY id DESC LIMIT 1;
+
++----+-------------+--------------+---------+
+| id | name        | release_year | band_id |
++----+-------------+--------------+---------+
+| 21 | STEREO LOVE |         2010 |       9 |
++----+-------------+--------------+---------+

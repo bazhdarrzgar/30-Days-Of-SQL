@@ -25,6 +25,8 @@ LIMIT 1;
 
 
 
+-- Start
+
 SELECT
   albums.name as Name,
   albums.release_year as 'Release Year',

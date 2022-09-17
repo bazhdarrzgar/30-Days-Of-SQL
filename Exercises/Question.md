@@ -86,7 +86,7 @@ Return the **album name** as `Name`, the album **release year** as `Release Year
 [Solution](solutions/6.sql)
 
 
-### 7. Update the Release Year of the Album with no Release Year
+### **7. Update the Release Year of the Album with no Release Year**
 
 Set the `release year` to 1986 of this row that not release year or in another word is `NULL`.
 
@@ -94,21 +94,22 @@ You may run into an error if you try to update the release year by using `releas
 
 [Solution](solutions/7.sql)
 
-### 8. Insert a record for your favorite Band and one of their Albums
+
+### **8. Insert a record for your favorite Band and one of their Albums**
 
 If you performed this correctly you should be able to now see that band and album in your tables.
 
 [Solution](solutions/8.sql)
 
 
-### 9. Delete the Band and Album you added in #8
+### **9. Delete the Band and Album you added in Exercises #8**
 
 The order of how you delete the records is important since album has a foreign key to band.
 
 [Solution](solutions/9.sql)
 
 
-### 10. Get the Average Length of all Songs
+### **10. Get the Average Length of all Songs**
 
 Return the average length as `Average Song Duration`.
 
@@ -119,35 +120,38 @@ Return the average length as `Average Song Duration`.
 
 [Solution](solutions/10.sql)
 
-### 11. Select the longest Song off each Album
+### **11. Select the longest Song off each Album**
 
 Return the album name as `Album`, the album release year as `Release Year`, and the longest song length as `Duration`.
 
-| Album                       | Release Year | Duration | 
-|-----------------------------|--------------|----------| 
-| Tiara                       | 2018         | 9.5      | 
-| The Great Escape            | 2010         | 30.2333  | 
-| Mercy Falls                 | 2008         | 9.48333  | 
-| Master of Puppets           | 1986         | 8.58333  | 
-| ...And Justice for All      | 1988         | 9.81667  | 
-| Death Magnetic              | 2008         | 9.96667  | 
-| Heliocentric                | 2010         | 7.48333  | 
-| Pelagial                    | 2013         | 9.28333  | 
-| Anthropocentric             | 2010         | 9.4      | 
-| Resist                      | 2018         | 5.85     | 
-| The Unforgiving             | 2011         | 5.66667  | 
-| Enter                       | 1997         | 7.25     | 
-| The Sound of Perseverance   | 1998         | 8.43333  | 
-| Individual Thought Patterns | 1993         | 4.81667  | 
-| Human                       | 1991         | 4.65     | 
-| A Storm to Come             | 2006         | 5.21667  | 
-| Break the Silence           | 2011         | 6.15     | 
-| Tribe of Force              | 2010         | 8.38333  | 
-
+```
++-----------------------------+--------------+----------+
+| Album                       | Release Year | Duration |
++-----------------------------+--------------+----------+
+| Tiara                       |         2018 |       10 |
+| The Great Escape            |         1986 |       30 |
+| Mercy Falls                 |         2008 |        9 |
+| Master of Puppets           |         1986 |        9 |
+| ...And Justice for All      |         1988 |       10 |
+| Death Magnetic              |         2008 |       10 |
+| Heliocentric                |         2010 |        7 |
+| Pelagial                    |         2013 |        9 |
+| Anthropocentric             |         2010 |        9 |
+| Resist                      |         2018 |        6 |
+| The Unforgiving             |         2011 |        6 |
+| Enter                       |         1997 |        7 |
+| The Sound of Perseverance   |         1998 |        8 |
+| Individual Thought Patterns |         1993 |        5 |
+| Human                       |         1991 |        5 |
+| A Storm to Come             |         2006 |        5 |
+| Break the Silence           |         2011 |        6 |
+| Tribe of Force              |         2010 |        8 |
++-----------------------------+--------------+----------+
+```
 
 [Solution](solutions/11.sql)
 
-### 12. Get the number of Songs for each Band
+### **12. Get the number of Songs for each Band**
 
 This is one of the toughest question on the list. It will require you to chain together two joins instead of just one.
 

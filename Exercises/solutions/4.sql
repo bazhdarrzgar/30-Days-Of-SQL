@@ -25,7 +25,7 @@ JOIN albums ON bands.id = albums.band_id;
 
 
 
--- done do this
+-- Start
 
 SELECT DISTINCT bands.name AS 'Band Name' FROM bands 
 JOIN albums ON bands.id = albums.band_id;
@@ -37,39 +37,39 @@ JOIN albums ON bands.id = albums.band_id;
 
 -- If bands do not have a unique name then use this query
 
-  SELECT bands.name AS 'Band Name'
-  FROM bands
-  JOIN albums ON bands.id = albums.band_id
-  /*
-  GROUP BY something...  is use for ordering the data for ascending (ASC) or descending (DESC) order by default is ascending (ASC) order
+SELECT bands.name AS 'Band Name'
+FROM bands
+JOIN albums ON bands.id = albums.band_id
+/*
+GROUP BY something...  is use for ordering the data for ascending (ASC) or descending (DESC) order by default is ascending (ASC) order
+
+remember    GROUP BY something...    is remove duplicate vlaue when return the vlaue by this order that you specify for
+*/
+GROUP BY albums.band_id
+/*
+HAVING condition....   is similare to   WHERE   keyword or   ON   keyword but it is use when you use   ON   or   WHERE   keyword and you want use more condition in this case we are using   HAVING   keyword
+
+COUNT column_name...  i use   COUNT   keyword here for condition, that is it self use for counting this id from table albums
+
+this condition below say if my id in table albums is more than 0 then this condition will be true in another word if there is value exist in table albums then return true 
+*/
+HAVING COUNT(albums.id) > 0;
+
+
+
+
+
+
+
+
   
-  remember    GROUP BY something...    is remove duplicate vlaue when return the vlaue by this order that you specify for
-  */
-  GROUP BY albums.band_id
-  /*
-  HAVING condition....   is similare to   WHERE   keyword or   ON   keyword but it is use when you use   ON   or   WHERE   keyword and you want use more condition in this case we are using   HAVING   keyword
+-- Start
 
-  COUNT column_name...  i use   COUNT   keyword here for condition, that is it self use for counting this id from table albums
-
-  this condition below say if my id in table albums is more than 0 then this condition will be true in another word if there is value exist in table albums then return true 
-  */
-  HAVING COUNT(albums.id) > 0;
-
-
-
-
-
-
-
-
-  
-  -- done do this
-
-  SELECT bands.name AS 'Band Name'
-  FROM bands
-  JOIN albums ON bands.id = albums.band_id
-  GROUP BY albums.band_id
-  HAVING COUNT(albums.id) > 0;
+SELECT bands.name AS 'Band Name'
+FROM bands
+JOIN albums ON bands.id = albums.band_id
+GROUP BY albums.band_id
+HAVING COUNT(albums.id) > 0;
 
 
 
