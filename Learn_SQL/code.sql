@@ -9,6 +9,13 @@ DROP TABLE IF EXISTS person;
 DROP TABLE IF EXISTS pet;
 DROP TABLE IF EXISTS person_pet;
 
+/*
+
+INTEGER(size)	Equal to INT(size)
+TEXT(size)	Holds a string with a maximum length of 65,535 bytes
+DATETIME(fsp)  Date and time. Format: YYYY-MM-DD hh:mm:ss. Range: ('1000-01-01 00:00:00' to '9999-12-31 23:59:59').
+
+*/
 CREATE TABLE person (
     id INTEGER PRIMARY KEY,
     first_name TEXT,
@@ -40,6 +47,7 @@ CREATE TABLE person_pet (
 -- inserting into the table
 
 -- Inserting into the table by specifing the columns of this table but remember the ordering of the column should be match this order that you made for the column when you created the table person in this case
+-- we sprate all the column by comma ( , )
 INSERT INTO person (id, first_name, last_name, age) VALUES (0, "Zed", "Shaw", 37);
 
 -- Inserting into the table without specifing the column name but in this case you should put the value for each column because the sql compiler thinks that you want put value to all the column if you don't send value for one of the column then they return an error
@@ -89,6 +97,8 @@ SELECT * FROM person WHERE first_name != "Zed";
 +----+------------+-----------+------+------+--------------+
 
 
+-- Selecting just this row that is in column (name) and (age)
+-- we sprate all the column by comma ( , )
 SELECT name, age FROM pet;
 
 +----------+------+
@@ -99,6 +109,8 @@ SELECT name, age FROM pet;
 | Gigantor |    1 |
 +----------+------+
 
+-- Selecting just this row that is in column (name) and (age)
+-- Where row of (dead) equal ( = ) 0
 SELECT name, age FROM pet WHERE dead = 0;
 
 +----------+------+
@@ -108,7 +120,8 @@ SELECT name, age FROM pet WHERE dead = 0;
 | Gigantor |    1 |
 +----------+------+
 
-/* make sure there's dead pets */
+-- Selecting just this row that is in column (name) and (age)
+-- Where row of (dead) equal ( = ) 1
 SELECT name, age FROM pet WHERE dead = 1;
 +----------+------+
 | name     | age  |
@@ -117,19 +130,34 @@ SELECT name, age FROM pet WHERE dead = 1;
 +----------+------+
 
 
+
+/*
+
+# Syntax # we can detect the right column for the right table using dot (.) this is true for database
+
+table_name.column_name
+
+database_name.table_name.column_name
+
+*/
 SELECT pet.id, pet.name, pet.age, pet.dead
+    -- we are also should be specify the where you want take this in this case from this three table we sprate all this by comma ( , )
     FROM pet, person_pet, person
+    /*
+    we are also make some condition using logical operator ( AND   OR )
+
+    AND  true if both statement is true and false if both or one of the statement is false
+    OR  true if one or both statement is true and false if both statement is false
+    */
     WHERE
-    pet.id = person_pet.pet_id AND
-    person_pet.person_id = person.id AND
-    person.first_name = "Zed";
+    pet.id = person_pet.pet_id AND person_pet.person_id = person.id AND person.first_name = "Zed";
+
++----+--------+------+------+
+| id | name   | age  | dead |
++----+--------+------+------+
+|  0 | Fluffy | 1000 |    0 |
++----+--------+------+------+
 
 
-/* aww poor robot */
+-- Deleting all the row Where data of (dead) from this row is equal ( = ) 0  
 DELETE FROM pet WHERE dead = 1;
-
-/* make sure the robot is gone */
-SELECT * FROM pet;
-
-/* the robot LIVES! */
-SELECT * FROM pet;
