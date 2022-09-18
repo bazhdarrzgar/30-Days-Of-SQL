@@ -1,12 +1,7 @@
-update person set first_name = 'Zed'
-	where id=0;
 
-update pet set name = 'Fancy pants'
-	where id=0;
-
-select * from person;
-select * from pet;
-
-update pet set name = 'Deceased' where dead in(
-	where id = 0 
+-- updating table (pet) using id or in another word using PRIMARY KEY of this table
+update pet set name = 'Deceased' where dead in (
+	where id = 1
 );
+
+select * from pet where id = 2;
