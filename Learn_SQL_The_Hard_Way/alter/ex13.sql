@@ -64,7 +64,8 @@ UPDATE pet SET parent = 1 WHERE id = 0;
 
 --  you can use sub statement with UPDATE but not with DELETE or INSERT
 UPDATE person_pet SET purchased_on = "2000-01-01" WHERE person_id IN (
-	SELECT person.id
+	SELECT id
+	-- SELECT person.id -- you can also do that 
 	FROM person
 	WHERE
 	person.first_name = "Zed"
@@ -175,25 +176,29 @@ INSERT INTO person_pet (person_id, pet_id, purchased_on)
 /* 
 
 Write a query that can find all the names of pets and their owners bought after 2004.
-Key to this is to map the person_pet based on the purchased_on column to the pet and
-parent 
+
+* table (person)  handle the customer name
+* table (pet) handle the product name
+* table (person_pet) handle the purcharse date
 
 */
 
 SELECT person.first_name, person.last_name, pet.name
-	FROM person, pet, person_pet
-	WHERE
-	person.id = person_pet.person_id AND
-	pet.id = person_pet.pet_id AND
-	person_pet.purchased_on > datetime("2004-01-01");
+FROM person, pet, person_pet
+WHERE
+-- connect table (person) with (person_pet) for customer data 
+person.id = person_pet.person_id AND
+-- connect table (pet) with (person_pet) for pets data    
+pet.id = person_pet.pet_id AND
+-- in the end we want all the purchase that made after 2004
+person_pet.purchased_on > "2004-01-01";
 
 
 
 
 /* 
 
-Write a query that can find the pets that are children of a given pet.  Again look
-at the pet.parent to do this.  It's actually easy so don't over think it. 
+Write a query that can find the pets that are children of a given pet.
 
 */
 
