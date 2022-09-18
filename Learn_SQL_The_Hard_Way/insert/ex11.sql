@@ -1,16 +1,28 @@
-/* this would fil because 0 is already taken */
+-- Insert
+-- this would fill because 0 is already taken
 insert into person (id, first_name, last_name, age)
 	values (0, 'Frank', 'Smith', 100);
 
-/* we can force it by doing an insert or replace */
-insert or replace into person (id, first_name, last_name, age)
-	values (0,'Frank', 'Smith', 100);
 
+-- Replace
+-- we can force it by doing an replace
+-- replace into person (id, first_name, last_name, age) values (0,'Frank', 'Smith', 100);
+
+
+-- showing the result
 select * from person;
 
-/* and shorthand for that is just replace.  */
-replace into person  ( is, first_name, last_name, age)
+
+
+
+-- Insert
+insert into person  (is, first_name, last_name, age)
 	values(0, 'Zed', 'Shaw', 37);
 
-	/*now you can see im back */
+
+-- Replace
+-- replace into person  ( is, first_name, last_name, age) values(0, 'Zed', 'Shaw', 37);
+	
+
+-- showing the result
 select * from person;

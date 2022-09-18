@@ -1,3 +1,5 @@
+-- a lot of insert
+
 INSERT INTO pet VALUES(NULL, "Boot", "Fish", "19", "1");
 INSERT INTO pet VALUES(NULL, "Attack", "Dog", "3", "1");
 INSERT INTO pet VALUES(NULL, "Burst", "Fish", "2", "1");
