@@ -23,6 +23,9 @@ ALTER TABLE table_name CHANGE old_col_name new_col_name datatype(length); -- spe
 ALTER TABLE table_name RENAME COLUMN old_col_name TO new_col_name datatype(length); -- specify the datatype and size
 
 
+-- Droping column of table
+ALTER TABLE table_name DROP column_name;
+
 
 */
 

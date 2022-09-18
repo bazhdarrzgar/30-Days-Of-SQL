@@ -1,5 +1,18 @@
 /*
 
+# Syntax
+
+-- deleting specific row in table_name
+DELETE FROM table_name WHERE primary_key_column = value..;
+
+
+-- deleting entire row of table
+DELETE FROM table_name
+
+
+
+
+
 -- Problem
 this problem is can't solve in this way not matter how much you try you get this error below this is because there is not join between this table you should have
 foregin key in table (person_pet) that referencing for (id) of table (pet) and also another foregin key in table (person_pet) that referencing for (id) of table (person) to make this join possible  

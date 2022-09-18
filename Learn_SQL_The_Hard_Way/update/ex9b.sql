@@ -1,4 +1,4 @@
--- you can't use sub statement in update or insert or delete just you can do that in select
+-- you can't update something base on something that is not PRIMARY KEY
 update pet set name = 'Deceased' where dead in (
 	select id from pet where id = 2;
 );
@@ -9,7 +9,7 @@ update pet set name = 'Deceased' where dead in (
 
 
 
--- you can't use sub statement in update or insert or delete just you can do that in select
+-- you can't update something base on something that is not PRIMARY KEY
 update pet set name = 'Deceased' where dead in (
 	where id = 2;
 );
