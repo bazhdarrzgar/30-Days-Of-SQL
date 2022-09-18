@@ -14,7 +14,8 @@ delete from pet where id in (
 	person.first_name = 'Zed'
 );
 
--- My error
+-- My error Link: https://stackoverflow.com/questions/45494/mysql-error-1093-cant-specify-target-table-for-update-in-from-clause
+
 -- ERROR 1093 (HY000): You can't specify target table 'pet' for update in FROM clause
 
 
