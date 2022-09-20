@@ -3,3 +3,14 @@ SELECT product_id, SUM(quantity) AS total_quantity
 FROM Sales
 -- remove duplicate value for column (product_id)
 GROUP BY product_id;
+
+
+
+
+
+
+--Start
+
+SELECT product_id, SUM(quantity) AS total_quantity
+FROM Sales
+GROUP BY product_id;
